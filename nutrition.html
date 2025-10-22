@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>Nutrition Guide & Meal Plan</title> 
+    
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="nutrition.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <!-- Bootstrap 4 CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest Compiled Javascript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">K-Fit</a>
+
+        <!-- Navbar Toggler Button (for small screens) -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsible-navbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Links -->
+        <div class="collapse navbar-collapse justify-content-end" id="collapsible-navbar">
+            <ul class="navbar-nav">
+
+                <!-- Home -->
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html">Home</a>
+                </li>
+    
+                <!-- Workouts and Nutrition -->
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                        Workouts & Nutrition
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="workout-plans.html">Workout Plans</a>
+                        <a class="dropdown-item" href="nutrition.html">Nutrition Guide & Meal Plans</a>
+                    </div>
+                </li>
+    
+                <!-- Tools -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                        Tools
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="calculators.html">TDEE & BMI Calculator</a>
+                        <a class="dropdown-item" href="quiz.html">Personal Workout Plan Quiz</a>
+                        <a class="dropdown-item" href="fitness-tracker.html">Fitness Tracker</a>
+                        <a class="dropdown-item" href="gym-finder.html">Find Nearby Gyms</a>
+                    </div>
+                </li>
+    
+                <!-- Contact -->
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+    
+                <!-- Account -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                        Account
+                    </a>
+                    <div  class="dropdown-menu dropdown-menu-right">
+                        <a id="membership-link" class="dropdown-item" href="membership.html">Sign Up / Log In</a>
+                        <button id="logout-button" class="dropdown-item" onclick="logout()">Log Out</button>
+                        <a class="dropdown-item" href="profile-dashboard.html">Profile Dashboard</a>
+                    </div>
+                </li>
+            </ul>
+        </div> 
+    </nav>
+    
+    <!-- Header -->
+    <div id="header" class="container-fluid">
+        <div class="container text-center">
+            <div class="row mb-5">
+                <div class="col-md-6 mb-5">
+                    <h1>Nutrition Guide</h1>
+                    <a href="#nutrition-guide" class="btn btn-warning">See More</a>
+                </div>
+    
+                <div class="col-md-6 mb-5">
+                    <h1>Meal Plan</h1>
+                    <a href="#meal-plan" class="btn btn-warning">See More</a>
+                </div>
+            </div>
+
+            <small class="photo-citation mt-5">Photo by Malidate Van on <a href="https://www.pexels.com/photo/steak-food-769289/" class="yellow-link">Pexels</a></small>
+        </div>
+    </div>
+
+    <!-- Nutrition Guide Section -->
+    <div id="nutrition-guide" class="container">
+        <h2 class="title">Let's Talk Protein</h2>
+
+        <!-- Information -->
+        <p>By now, we've all heard about the high-protein diets for optimal muscle-building and even for general health and well being. 
+            We've started adding protein powder to our yogurt, oats, coffee, shakes, desserts, and pretty much everything else we can imagine. 
+            While, it's good to be getting more protein, we need to conscious of the amount and the quality of the protein we're getting.<br><br>
+            
+            &emsp; The debate on how much protein you need for muscle-building has not yet been settled. While the recommended dietary allowance (RDA) for 
+            protein is 0.8 g per kg of body-weight, many body-building sources will tell you to have at least 2 grams per kilogram of bodyweight. 
+            With all these varying answers, a good target to aim for would be somewhere in between. 
+            <a href="https://www.medicalnewstoday.com/articles/how-much-protein-do-you-need-to-build-muscle#What-do-studies-say"  class="yellow-link">Medical News Today (2022)</a> 
+            states that:
+            <q cite="https://www.medicalnewstoday.com/articles/how-much-protein-do-you-need-to-build-muscle#What-do-studies-say">
+                the optimum amount of protein for muscle-building appears to be between 1.2 and 1.6 g per kg of body weight.</q><br><br>
+
+            It is also important to prioritise whole food protein sources and only use supplements to help fill the gaps. 
+            Whole food protein is absorbed more slowly and used more efficiently by our bodies, keeping us feeling full and energised for longer. 
+            Below are some examples of protein sources to include in your diet.
+        </p>
+
+        <!-- Food Chart of Protein Sources -->
+        <h3 class="text-center mt-5 mb-4">Protein Sources</h3>
+
+        <div class="table-responsive">
+            <table class="table table-bordered food-chart">
+                <!--Table Header -->
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Option 1</th>
+                        <th>Option 2</th>
+                        <th>Option 3</th>
+                        <th>Option 4</th>
+                    </tr>
+                </thead>
+
+                <!-- Table Body -->
+                <tbody>
+                    <tr>
+                        <th>Meat and Poultry</th>
+                        <td>
+                            <div class="food-item text-center">
+                                <img class="img-fluid mb-2" src="images/chicken-breast.png" alt="Raw chicken breast">
+                                <p>Chicken Breast</p>
+                                <p class="font-weight-bold">31g</p>
+                            </div> 
+                        </td>
+
+                        <td>
+                            <div class="food-item text-center">
+                                <img class="img-fluid mb-2" src="images/sirloin-steak.png" alt="Raw cut of sirloin steak">
+                                <p>Sirloin Steak</p>
+                                <p class="font-weight-bold">24g</p>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="food-item text-center">
+                                <img src="images/beef-mince.png" alt="Raw beef mince in a container" class="img-fluid mb-2">
+                                <p>Beef Mince (5% Fat)</p>
+                                <p class="font-weight-bold">26g</p>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="food-item text-center">
+                                <img src="images/pork-mince.png" alt="Raw pork mince" class="img-fluid mb-2">
+                                <p>Pork Mince (4% Fat)</p>
+                                <p class="font-weight-bold">32g</p>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Seafood</th>
+                        <td>
+                            <div class="food-item text-center">
+                                <img src="images/salmon.png" alt="Raw salmon fillet" class="img-fluid mb-2">
+                                <p>Salmon</p>
+                                <p class="font-weight-bold">20g</p>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="food-item text-center">
+                                <img src="images/cod.png" alt="Raw cod fillet" class="img-fluid mb-2">
+                                <p>Cod</p>
+                                <p class="font-weight-bold">18g</p>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="food-item text-center">
+                                <img src="images/canned-tuna.png" alt="Canned tuna chunks in brine" class="img-fluid mb-2">
+                                <p>Canned Tuna (in Brine)</p>
+                                <p class="font-weight-bold">25g</p>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="food-item text-center">
+                                <img src="images/shrimp.png" alt="Cooked piece of shrimp" class="img-fluid mb-2">
+                                <p>Shrimp</p>
+                                <p class="font-weight-bold">24g</p>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Eggs and Dairy</th>
+                        <td>
+                            <div class="food-item text-center">
+                                <img src="images/greek-yogurt.png" alt="Bowl of greek yogurt with blueberries" class="img-fluid mb-2">
+                                <p>Non-Fat Greek Yogurt</p>
+                                <p class="font-weight-bold">10g</p>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="food-item text-center">
+                                <img src="images/cottage-cheese.png" alt="Bowl of cottage cheese" class="img-fluid mb-2">
+                                <p>Non-Fat Cottage Cheese</p>
+                                <p class="font-weight-bold">10g</p>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="food-item text-center">
+                                <img src="images/milk.png" alt="Glass of milk" class="img-fluid mb-2">
+                                <p>Milk</p>
+                                <p class="font-weight-bold">4g</p>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="food-item text-center">
+                                <img src="images/eggs.png" alt="Carton of eggs" class="img-fluid mb-2">
+                                <p>Egg</p>
+                                <p class="font-weight-bold">13g</p>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Plant-based Products</th>
+                        <td>
+                            <div class="food-item text-center">
+                                <img src="images/tofu.png" alt="Tofu cubes marinated with soy sauce" class="img-fluid mb-2">
+                                <p>Tofu</p>
+                                <p class="font-weight-bold">10g</p>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="food-item text-center">
+                                <img src="images/tempeh.png" alt="Slices of tempeh" class="img-fluid mb-2">
+                                <p>Tempeh</p>
+                                <p class="font-weight-bold">19g</p>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="food-item text-center">
+                                <img src="images/chickpeas.png" alt="Pile of chickpeas" class="img-fluid mb-2">
+                                <p>Chickpeas</p>
+                                <p class="font-weight-bold">19g</p>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="food-item text-center">
+                                <img src="images/soy-milk.png" alt="Jug of soy milk" class="img-fluid mb-2">
+                                <p>Soy Milk</p>
+                                <p class="font-weight-bold">3g</p>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="text-center mt-4">
+            <small>PNGs from <a href="https://www.vecteezy.com/?utm_source=google&utm_medium=cpc&utm_campaign=brand&utm_term=vecteezy&utm_content=us&gad_source=1&gclid=Cj0KCQiA_NC9BhCkARIsABSnSTZQlxxXbPgOjn6h-LpCwXAQ8EMZsVv9Qc1d4KCYlfKTWLKBI40V9W4aApj8EALw_wcB" class="yellow-link">Vecteezy</a></small>
+        </div>
+    </div>
+
+    <!-- Meal Plans -->
+    <div id="meal-plan" class="container-fluid">
+        <div class="container">
+
+            <div class="title">
+                <h2>Meal Plans</h2>
+                <small>Recipes and images from <a href="https://www.eatthismuch.com/food/browse" class="text-warning">Eat This Much</a></small>
+            </div>
+
+            <div class="row">
+                <!-- Meal Plan 1 -->
+                <div class="day-plan col-lg-4 mb-5">
+                    <div class="day-plan-container">
+                        <div class="description">
+                            <h3>Day 1</h3>
+                            <p>1962 calories</p>
+                        </div>
+
+                        <h4>Breakfast</h4>
+                        <p>457 Calories</p>
+
+                        <div class="dish">
+                            <img src="images/protein-power-oats.jpeg" alt="Oatmeal topped with walnuts in a mason jar">
+                            <div class="text-container">
+                                <a href="https://www.eatthismuch.com/calories/protein-power-oats-3239331?a=1:1" class="purple-link">Protein Power Oats</a>
+                                <p>1 serving</p>
+                            </div>
+                        </div>
+
+                        <div class="dish">
+                            <img src="images/cream-cheese-toast.jpeg" alt="Cream cheese toast">
+                            <div class="text-container">
+                                <a href="https://www.eatthismuch.com/calories/cream-cheese-toast-905955?a=1:1" class="purple-link">Cream Cheese Toast</a>
+                                <p>1 serving</p>
+                            </div>
+                        </div>
+
+                        <h4>Lunch</h4>
+                        <p>564 Calories</p>
+
+                        <div class="dish">
+                            <img src="images/pb-berry-protein-smoothie.jpeg" alt="Peanut butter berry protein smoothie in a mason jar">
+                            <div class="text-container">
+                                <a href="https://www.eatthismuch.com/calories/sunrise-peanut-butter-berry-protein-smoothie-956531?a=1:1" class="purple-link">Sunrise Peanut Butter Berry Protein Smoothie</a>
+                                <p>1 smoothie</p>
+                            </div>
+                        </div>
+
+                        <div class="dish">
+                            <img src="images/almonds.jpeg" alt="Small bowl of almonds">
+                            <div class="text-container">
+                                <a href="https://www.eatthismuch.com/calories/almonds-524950?a=1:1" class="purple-link">Almonds</a>
+                                <p>1 ounce</p>
+                            </div>
+                        </div>
+
+                        <h4>Dinner</h4>
+                        <p>645 Calories</p>
+
+                        <div class="dish">
+                            <img src="images/grilled-cod.jpeg" alt="Grilled cod fillet">
+                            <div class="text-container">
+                                <a href="https://www.eatthismuch.com/calories/grilled-cod-949313?a=1:1" class="purple-link">Grilled Cod</a>
+                                <p>8 oz Fillet</p>
+                            </div>
+                        </div>
+
+                        <div class="dish">
+                            <img src="images/green-beans-dish.jpeg" alt="Green beans with tomato, garlic, and pine nuts">
+                            <div class="text-container">
+                                <a href="https://www.eatthismuch.com/calories/green-beans-with-tomato-garlic-and-pine-nuts-906996?a=1:1" class="purple-link">Green Beans with Tomato, Garlic, and Pine Nuts</a>
+                                <p>1 serving</p>
+                            </div>
+                        </div>
+
+                        <h4>Snack</h4>
+                        <p>295 Calories</p>
+
+                        <div class="dish">
+                            <img src="images/avocado-basil-yogurt.jpeg" alt="Bowl of yogurt with avocado and basil">
+                            <div class="text-container">
+                                <a href="https://www.eatthismuch.com/calories/yogurt-with-avocado-basil-334485?a=1:1" class="purple-link">Yogurt with Avocado and Basil</a>
+                                <p>1 serving</p>
+                            </div>
+                        </div>                  
+                    </div>
+                </div>
+
+                <!-- Meal Plan 2 -->
+                <div class="day-plan col-lg-4 mb-5">
+                    <div class="day-plan-container">
+                        <div class="description">   
+                            <h3>Day 2</h3>
+                            <p>2005 calories</p>
+                        </div>
+    
+                        <h4>Breakfast</h4>
+                        <p>538 Calories</p>
+    
+                        <div class="dish">
+                            <img src="images/protein-pancakes.jpg" alt="Protein silver dollar blueberry pancakes">
+                            <div class="text-container">
+                                <a href="https://www.eatthismuch.com/calories/protein-silver-dollar-blueberry-pancakes-3739721?a=1:1" class="purple-link">Protein Silver Dollar Blueberry Pancakes</a>
+                                <p>1 serving</p>
+                            </div>
+                        </div>
+    
+                        <div class="dish">
+                            <img src="images/peach-and-pb.jpg" alt="Small plate of peaches and peanut butter">
+                            <div class="text-container">
+                                <a href="https://www.eatthismuch.com/calories/peach-and-peanut-butter-snack-906934?a=1:1" class="purple-link">Peach and Peanut Butter Snack</a>
+                                <p>1 serving</p>
+                            </div>
+                        </div>
+    
+                        <h4>Lunch</h4>
+                        <p>580 Calories</p>
+    
+                        <div class="dish">
+                            <img src="images/strawberry-smoothie.jpg" alt="Strawberry smoothie in a glass cup">
+                            <div class="text-container">
+                                <a href="https://www.eatthismuch.com/calories/strawberry-smoothie-4361765?a=1:1" class="purple-link">Strawberry Smoothie</a>
+                                <p>1 smoothie</p>
+                            </div>
+                        </div>
+    
+                        <div class="dish">
+                            <img src="images/caprese-salad.jpg" alt="Plate of caprese Salad">
+                            <div class="text-container">
+                                <a href="https://www.eatthismuch.com/calories/quick-and-easy-low-carb-caprese-salad-906415?a=1:1" class="purple-link">Quick and Easy Low Carb Caprese Salad</a>
+                                <p>1 serving</p>
+                            </div>
+                        </div>
+    
+                        <h4>Dinner</h4>
+                        <p>610 Calories</p>
+    
+                        <div class="dish">
+                            <img src="images/seafood-cakes.jpg" alt="Three seafood cakes on a plate">
+                            <div class="text-container">
+                                <a href="https://www.eatthismuch.com/calories/seafood-cakes-1012837?a=1:1" class="purple-link">Seafood Cakes</a>
+                                <p>1 serving</p>
+                            </div>
+                        </div>
+    
+                        <div class="dish">
+                            <img src="images/bean-sprout-and-spinach.jpg" alt="Bean sprout and spinach salad">
+                            <div class="text-container">
+                                <a href="https://www.eatthismuch.com/calories/bean-sprout-and-spinach-salad-3841269?a=1:1" class="purple-link">Bean Sprout and Spinach Salad</a>
+                                <p>1 serving</p>
+                            </div>
+                        </div>
+    
+                        <h4>Snack</h4>
+                        <p>276 Calories</p>
+    
+                        <div class="dish">
+                            <img src="images/pb-honey-toast.jpg" alt="Peanut butter and honey toast">
+                            <div class="text-container">
+                                <a href="https://www.eatthismuch.com/calories/peanut-butter-and-honey-toast-905650?a=1:1" class="purple-link">Peanut Butter and Honey Toast</a>
+                                <p>1 serving</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Meal Plan 3 -->
+                <div class="day-plan col-lg-4 mb-5">
+                    <div class="day-plan-container">
+                        <div class="description">
+                            <h3>Day 3</h3>
+                            <p>2001 calories</p>
+                        </div>
+    
+                        <h4>Breakfast</h4>
+                        <p>499 Calories</p>
+    
+                        <div class="dish">
+                            <img src="images/pb-protein-oats.jpg" alt="Bowl of peanut butter protein oats">
+                            <div class="text-container">
+                                <a href="https://www.eatthismuch.com/calories/peanut-butter-protein-oats-3296133?a=1:1" class="purple-link">Peanut Butter Protein Oats</a>
+                                <p>1 serving</p>
+                            </div>
+                        </div>
+    
+                        <div class="dish">
+                            <img src="images/pb-peach-toast.jpeg" alt="Peanut butter and peach toast">
+                            <div class="text-container">
+                                <a href="https://www.eatthismuch.com/calories/peanut-butter-and-peach-toast-906075?a=1:1" class="purple-link">Peanut Butter and Peach Toast</a>
+                                <p>1 serving</p>
+                            </div>
+                        </div>
+    
+                        <h4>Lunch</h4>
+                        <p>538 Calories</p>
+    
+                        <div class="dish">
+                            <img src="images/blueberry-yogurt.jpeg" alt="Bowl of protein yogurt and blueberries">
+                            <div class="text-container">
+                                <a href="https://www.eatthismuch.com/calories/protein-yogurt-and-blueberries-946462?a=1:1" class="purple-link">Protein Yogurt and Blueberries</a>
+                                <p>1 serving</p>
+                            </div>
+                        </div>
+    
+                        <div class="dish">
+                            <img src="images/green-salad.jpg" alt="Bowl of mixed greens salad">
+                            <div class="text-container">
+                                <a href="https://www.eatthismuch.com/calories/green-salad-3255187?a=0.125:1" class="purple-link">Green Salad</a>
+                                <p>0.5 serving</p>
+                            </div>
+                        </div>
+    
+                        <h4>Dinner</h4>
+                        <p>687 Calories</p>
+    
+                        <div class="dish">
+                            <img src="images/spicy-chicken-soup.jpeg" alt="Bowl of spicy chicken soup">
+                            <div class="text-container">
+                                <a href="https://www.eatthismuch.com/calories/spicy-chicken-soup-412944?a=0.5:1" class="purple-link">Spicy Chicken Soup</a>
+                                <p>1 serving</p>
+                            </div>
+                        </div>
+    
+                        <div class="dish">
+                            <img src="images/summer-salad.jpg" alt="Bowl of summer pepper and tomato salad">
+                            <div class="text-container">
+                                <a href="https://www.eatthismuch.com/calories/summer-pepper-and-tomato-salad-905579?a=1:1" class="purple-link">Summer Pepper and Tomato Salad</a>
+                                <p>1 serving</p>
+                            </div>
+                        </div>
+    
+                        <h4>Snack</h4>
+                        <p>277 Calories</p>
+    
+                        <div class="dish">
+                            <img src="images/trail-mix.jpg" alt="Small bowl of trail mix">
+                            <div class="text-container">
+                                <a href="https://www.eatthismuch.com/calories/trail-mix-930974?a=1:1" class="purple-link">Trail Mix</a>
+                                <p>1 serving</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <!-- Logo -->
+                <div class="col-md-6">
+                    <h5>K-Fit</h5>
+                    <p>Your complete fitness solution for workouts and nutrition.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="workout-plans.html">Workout Plans</a></li>
+                        <li><a href="nutrition.html">Nutrition Guide & Meal Plans</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="profile-dashboard.html">Profile</a></li>
+                    </ul>
+                </div>
+
+                <!-- Join Us -->
+                <div class="col-md-3">
+                    <h5>Join Us</h5>
+                    <form id="join-form" class="mb-3">
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="join-email" placeholder="Enter your email" required>
+                        </div>
+                        <button type="button" class="btn btn-warning btn-block" onclick="getStarted()">Get Started</button>
+                    </form>
+                </div>
+            </div>
+
+            <a class="bi bi-facebook" href="https://facebook.com"></a>
+            <a class="bi bi-instagram" href="https://instagram.com"></a>
+            <a class="bi bi-snapchat" href="https://snapchat.com"></a>
+            <a class="bi bi-pinterest" href="https://pinterest.com"></a>
+            <a class="bi bi-twitter" href="https://twitter.com"></a>
+            <a class="bi bi-linkedin" href="https://linkedin.com"></a>
+        </div>
+    </footer>
+
+    <!-- Sign Up Modal -->
+    <div id="signup-modal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center">
+                <div class="modal-header">
+                    <h5 id="signup-modal-title" class="modal-title w-100">Join Us!</h5>
+                </div>
+                <div class="modal-body">
+                    <p>Please create an account to access the rest of the content.</p>
+                    <a href="membership.html" class="btn btn-warning mb-2">Create Account</a><br>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="scrollToTop()">Maybe Later</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll-To-Top Button -->
+    <button id="scroll-btn" class="bi bi-arrow-up fixed-bottom" onclick="scrollToTop()"> Top</button>
+
+    <!-- Reference to JavaScript files -->
+    <script src="global.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            hideContentOnScroll(1000);
+        });
+    </script>
+</body>
+</html>

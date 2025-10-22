@@ -1,0 +1,47 @@
+/* Header */
+#header {
+    background-image: url('images/home-header.jpg');
+}
+
+/* Featured Pages */
+#featured-pages {
+    background-color: white;
+    border-top-left-radius: 25%;
+    border-top: 1px solid var(--medium-purple) !important;
+    border-bottom-right-radius: 25%;
+    border-top: 1px solid var(--medium-purple) !important;
+}
+
+/* About Us */
+#about-us {
+    color: white;
+    padding: 0;
+}
+
+#about-us-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--mt-5);
+}
+
+/* Reviews */
+.carousel-inner {
+    padding: var(--small-spacing);
+    background-color: var(--light-gray);
+    border-radius: 5px;
+}
+
+.carousel-item {
+    height: 230px;
+    padding: 2vw 10vw;
+}
+
+.carousel-item .subtitle, .carousel-item small {
+    color: var(--yellow);
+    font-weight: bold;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    filter: invert(100%);
+}

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>Membership</title> 
+    
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="membership.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <!-- Bootstrap 4 CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest Compiled Javascript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">K-Fit</a>
+
+        <!-- Navbar Toggler Button (for small screens) -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsible-navbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Links -->
+        <div class="collapse navbar-collapse justify-content-end" id="collapsible-navbar">
+            <ul class="navbar-nav">
+
+                <!-- Home -->
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html">Home</a>
+                </li>
+    
+                <!-- Workouts and Nutrition -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                        Workouts & Nutrition
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="workout-plans.html">Workout Plans</a>
+                        <a class="dropdown-item" href="nutrition.html">Nutrition Guide & Meal Plans</a>
+                    </div>
+                </li>
+    
+                <!-- Tools -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                        Tools
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="calculators.html">TDEE & BMI Calculator</a>
+                        <a class="dropdown-item" href="quiz.html">Personal Workout Plan Quiz</a>
+                        <a class="dropdown-item" href="fitness-tracker.html">Fitness Tracker</a>
+                        <a class="dropdown-item" href="gym-finder.html">Find Nearby Gyms</a>
+                    </div>
+                </li>
+    
+                <!-- Contact -->
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+    
+                <!-- Account -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                        Account
+                    </a>
+                    <div  class="dropdown-menu dropdown-menu-right">
+                        <a id="membership-link" class="dropdown-item" href="membership.html">Sign Up / Log In</a>
+                        <button id="logout-button" class="dropdown-item" onclick="logout()">Log Out</button>
+                        <a class="dropdown-item" href="profile-dashboard.html">Profile Dashboard</a>
+                    </div>
+                </li>
+            </ul>
+        </div> 
+    </nav>
+
+    <!-- Sign Up Page-->
+    <div id="membership" class="container-fluid">
+        <div class="container">
+
+            <div class="title">
+                <h1>Membership</h1>
+                <span id="switch-question">Already have an account?</span>
+                <button type="button" id="switch-btn" class="btn btn-warning">Log In</button>
+            </div>
+
+            <!-- Sign Up Form -->
+            <form id="signup-form" class="row" method="post">
+
+                <!-- Membership Plans -->
+                <div id="membership-plans" class="col-md-4">
+                    <div role="button" class="membership-plan" data-value="Standard Plan">
+                        <h4>Standard Plan</h4>
+                        <p>Gain access to all of our pre-made workout plans, meal plans, and expert fitness and nutrition advice.</p>
+                    </div>
+                    <div role="button" class="membership-plan" data-value="Premium Plan">
+                        <h4>Premium Plan</h4>
+                        <p>Get custom made workout plans and meal plans just for you.</p>
+                        <small>*In addition to standard plan benefits.</small>
+                    </div>
+                    <div role="button" class="membership-plan" data-value="One-On-One Plan">
+                        <h4>One-On-One Plan</h4>
+                        <p>Work with a online personal trainer and nutritionist to guide you through each step of your journey.</p>
+                        <small>*In addition to premium and standard plan benefits.</small>
+                    </div>
+                </div>
+                
+                <!-- Personal Details -->
+                <div class="col-md-8" style="line-height: var(--large-spacing);">
+
+                    <!-- Name -->
+                    <div class="row">
+                        <div class="col-sm form-group">
+                            <label for="signup-firstName">First</label>
+                            <input type="text" id="signup-firstName" class="firstName form-control" name="firstName" placeholder="John" required>
+                        </div>
+                        <div class="col-sm form-group">
+                            <label for="signup-lastName">Last</label>
+                            <input type="text" id="signup-lastName" class="lastName form-control" name="lastName" placeholder="Doe" required>
+                        </div>
+                    </div>
+
+                    <!-- Date of Birth -->
+                    <div class="form-group mb-3">
+                        <label for="signup-birthday">Date of Birth</label>
+                        <input type="date" id="signup-birthday" class="form-control" name="birthday" required>
+                    </div>
+                    
+                    <!-- Gender -->
+                    <label>Gender</label><br>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" id="female" class="form-check-input" name="gender" value="Female" required>
+                        <label for="female" class="form-check-label">Female</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" id="male" class="form-check-input" name="gender" value="Male">
+                        <label for="male" class="form-check-label">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" id="other" class="form-check-input" name="gender" value="Other">
+                        <label for="other" class="form-check-label">Other</label>
+                    </div>
+                    
+                    <!-- Email, Number, and Password -->
+                    <div class="form-group mb-3">
+                        <label for="signup-email">Email</label>
+                        <input type="email" id="signup-email" class="email form-control" name="email" placeholder="johndoe@email.com" required>    
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="signup-number">Phone Number</label>
+                        <input type="text" id="signup-number" class="number form-control" name="number" placeholder="+44 0000 000000">
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" class="password form-control" name="password" placeholder="123" required>
+                        <p>Passwords must contain at least:<br>
+                        * One digit<br>
+                        * One letter<br>
+                        * 8 characters
+                        </p>
+                    </div>
+
+                    <!-- Preferences -->
+                    <input type="checkbox" id="signup-newsletter" name="newsletter">
+                    <label for="signup-newsletter">Sign up for our weekly newsletter!</label><br>
+                    
+                    <input type="checkbox" id="signup-discounts" name="discounts">
+                    <label for="signup-discounts">Receive exclusive member discounts and promotions!</label><br><br>
+
+                    <button type="button" id="signup-submit-button" class="submit-button purple-button">Submit</button>
+                </div>
+            </form>
+
+            <!-- Sign Up Success Message -->
+            <div id="signup-success-msg">
+                <h3>Account Creation Successful!</h3>
+                <button id="login-btn" class="purple-button" onclick="toggleSwitch()">Log In</button>
+            </div>
+
+            <!-- Log In Form -->
+            <form id="login-form">
+                <div class="form-group mb-3">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" class="email form-control" name="email" placeholder="johndoe@email.com" required>    
+                </div>
+
+                <div class="form-group mb-4">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" class="password form-control" name="password" placeholder="123" required>
+                </div>
+
+                <button type="button" id="login-submit-button" class="submit-button purple-button">Submit</button>
+            </form>
+        </div>
+
+        <small>Photo by Cesar Galeão from <a href="https://www.pexels.com/photo/man-holding-brown-rope-3253501/" class="yellow-link">Pexels</a></small>
+    </div>
+
+    <!-- Footer -->
+    <footer class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <!-- Logo -->
+                <div class="col-md-6">
+                    <h5>K-Fit</h5>
+                    <p>Your complete fitness solution for workouts and nutrition.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="workout-plans.html">Workout Plans</a></li>
+                        <li><a href="nutrition.html">Nutrition Guide & Meal Plans</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="profile-dashboard.html">Profile</a></li>
+                    </ul>
+                </div>
+
+                <!-- Join Us -->
+                <div class="col-md-3">
+                    <h5>Join Us</h5>
+                    <form id="join-form" class="mb-3">
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="join-email" placeholder="Enter your email" required>
+                        </div>
+                        <button type="button" class="btn btn-warning btn-block" onclick="getStarted()">Get Started</button>
+                    </form>
+                </div>
+            </div>
+
+            <a class="bi bi-facebook" href="https://facebook.com"></a>
+            <a class="bi bi-instagram" href="https://instagram.com"></a>
+            <a class="bi bi-snapchat" href="https://snapchat.com"></a>
+            <a class="bi bi-pinterest" href="https://pinterest.com"></a>
+            <a class="bi bi-twitter" href="https://twitter.com"></a>
+            <a class="bi bi-linkedin" href="https://linkedin.com"></a>
+        </div>
+    </footer>
+
+    <!-- Scroll-To-Top Button -->
+    <button id="scroll-btn" class="bi bi-arrow-up fixed-bottom" onclick="scrollToTop()"> Top</button>
+
+    <!-- Reference to JavaScript files -->
+    <script src="global.js"></script>
+    <script src="membership.js"></script>
+
+</body>
+</html>

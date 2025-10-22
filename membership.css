@@ -1,0 +1,83 @@
+/* Membership Page*/
+#membership {
+    background: linear-gradient(
+        to bottom,
+        transparent 70%,
+        var(--medium-purple) 30%),
+        url('images/home-header.jpg');
+    background-size: cover;
+    background-position: top;
+    color: white;  
+    text-align: center;
+}
+
+.title h1 {
+    text-shadow: 4px 4px var(--dark-purple);
+}
+
+.title span {
+    margin-top: var(--mt-2);
+    text-shadow: 2px 2px var(--dark-purple);
+}
+
+#login-btn {
+    border-radius: 15px;
+    margin-left: var(--mt-1);
+}
+
+/* Forms */
+#signup-form, #login-form {
+    padding: var(--mt-3) 0;
+    margin: auto;
+    margin-bottom: var(--mt-2);
+    max-width: 900px;
+    background-color: white;
+    box-shadow: 8px 8px var(--dark-purple);
+    text-align: left;
+    color: black;
+}
+
+#login-form {
+    max-width: 500px;
+    padding: var(--mt-3);
+    height: fit-content;
+}
+
+/* Membership Plans */
+.membership-plan {
+    margin-bottom: var(--mt-2);
+    padding: var(--mt-2);
+    border: 1px solid black;
+    background-color: white;
+    width: 100%;
+}
+
+.membership-plan:hover, .membership-plan:focus {
+    background-color: var(--light-gray);
+    border: 1px solid var(--medium-purple)
+}
+
+.membership-plan:focus, .focused {
+    box-shadow: 3px 3px 5px var(--medium-purple) inset;
+}
+
+.membership-plan p {
+    font-size: 14px;
+}
+
+.membership-plan small {
+    font-size: 10px;
+    font-style: italic;
+}
+
+/* Sign-up Success Message */
+#signup-success-msg {
+    padding: var(--mt-5) 0;
+    margin: auto;
+    margin-bottom: var(--mt-2);
+    max-width: 600px;
+    background-color: white;
+    box-shadow: 8px 8px var(--dark-purple);
+    text-align: center;
+    color: black;
+}

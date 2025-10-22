@@ -1,0 +1,239 @@
+/* Variables for consistent colors and spacing */
+:root {
+    --dark-purple: #2E1A47;
+    --medium-purple: #5C4B8A;
+    --light-purple: #9B59B6;
+    --yellow: #F1C40F;
+    --dark-yellow: #d1ab14;
+    --light-gray: #f6f6f6;
+    --gray: rgb(190, 190, 190);
+    --xs-spacing: 0.5em;
+    --small-spacing: 1em;
+    --medium-spacing: 1.5em;
+    --large-spacing: 2em;
+    --xl-spacing: 4em;
+    --mt-1: 0.25rem;
+    --mt-2: .5rem;
+    --mt-3: 1rem;
+    --mt-4: 1.5rem;
+    --mt-5: 3rem;
+}
+
+/* Navigation bar */
+.navbar {
+    background-color: var(--medium-purple);
+}
+
+/* Header */
+#header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 95vh;
+    width: 100%;
+    border-radius: 0px;
+    padding: var(--large-spacing);
+    background-size: cover;
+    background-position: right center;
+    color: white;
+}
+
+#header .container-fluid { 
+    padding: var(--xl-spacing);
+}
+
+/* Navigation Bar */
+.navbar-toggler, .navbar-toggler:focus {
+    border: none !important;
+    outline: none !important;
+}
+
+/* Footer */
+footer {
+    background-color: var(--medium-purple);
+    color: white;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: gray;
+}
+
+/* Containers */
+.container {
+    padding: var(--xl-spacing) 0;
+}
+
+.purple-background {
+    background-color: var(--medium-purple) !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+}
+
+/* Cards */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--small-spacing);
+}
+
+.card {
+    width: 300px !important;
+    border: 0px !important;
+    padding: 0px !important;
+    border-radius: 15px !important;
+    text-decoration: none;
+    transition: transform .4s;
+    z-index: 1; /* To ensure it doesn't overlap the navigation bar */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    height: 300px;
+    width: 100%;
+    border-top-left-radius: 15px !important;
+    border-top-right-radius: 15px !important;
+    object-fit: cover !important;
+}
+
+.card-link {
+    border-radius: 15px;
+}
+
+.card-link:hover {
+    text-decoration: none;
+}
+
+/* Different card colors */
+.yellow-card, .yellow-card .card-link{
+    background-color: var(--yellow) !important;
+    color: var(--dark-purple) !important;
+}
+
+.yellow-card .card-title {
+    color: var(--light-purple);
+    font-weight: bold;
+}
+
+.medium-purple-card, .medium-purple-card .card-link {
+    background-color: var(--medium-purple) !important;
+    color: white !important;
+}
+
+.medium-purple-card .card-title {
+    color: var(--yellow);
+    font-weight: bold;
+}
+
+.dark-purple-card, .dark-purple-card .card-link {
+    background-color: var(--dark-purple) !important;
+    color: white !important;
+}
+
+.dark-purple-card .card-title {
+    color: var(--yellow);
+    font-weight: bold;
+}
+
+/* Different button colors */
+.purple-button {
+    border-radius: 10px;
+    padding: 5px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: var(--medium-purple);
+    color: white;
+}
+
+.purple-button:hover {
+    background-color: var(--dark-purple);
+}
+
+.black-outline-button {
+    border-radius: 15px;
+    border: 1px solid black;
+    padding: 4px 10px;
+    font-size: 14px;
+    text-decoration: none;
+    background-color: white;
+}
+
+.black-outline-button:hover {
+    background-color: var(--light-gray);
+}
+
+/* Links */
+a {
+    text-decoration: none;
+}
+
+.yellow-link {
+    color: var(--yellow);
+    font-weight: bold;
+}
+
+.yellow-link:hover {
+    color: var(--dark-yellow);
+    text-decoration: none;
+}
+
+.purple-link {
+    color: var(--medium-purple);
+    font-weight: bold;
+}
+
+.purple-link:hover {
+    color: var(--dark-purple);
+    text-decoration: none;
+}
+
+/* Sign Up Modal */
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Scroll-To-Top Button */
+#scroll-btn {
+    display: none; /* Hidden initially */
+    position: fixed !important;
+    left: auto !important;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: var(--yellow);
+    color: var(--dark-purple);
+    cursor: pointer;
+    margin: var(--small-spacing);
+    padding: var(--xs-spacing);
+    border-radius: 10px;
+    width: 70px;
+}
+
+#scroll-btn:hover {
+    background-color: var(--dark-yellow);
+}
+
+/* Text styles */
+h1 {
+    font-size: 80px;
+}
+
+.title {
+    margin-bottom: var(--mt-5);
+    text-align: center;
+}
+
+.subtitle {
+    margin-bottom: var(--mt-3);
+    text-align: center;
+}

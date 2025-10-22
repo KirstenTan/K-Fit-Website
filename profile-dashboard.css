@@ -1,0 +1,38 @@
+/* Membership Page*/
+#page-background {
+    background-color: var(--medium-purple);
+    background: linear-gradient(
+        to bottom,
+        transparent 70%,
+        var(--medium-purple) 30%),
+        url('images/home-header.jpg');
+    background-size: cover;
+    background-position: top;
+}
+
+#profile-dashboard {
+    background-color: white;
+    color: black;
+    margin-top: var(--mt-5);
+    padding: var(--mt-5) !important;
+}
+
+#welcome-msg {
+    display: flex;
+    justify-content: space-between;
+}
+
+#buttons {
+    display: flex;
+    align-items: center;
+    gap: var(--mt-2);
+}
+
+#logout-button {
+    border-radius: 10px;
+    padding: 5px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 2px 2px 1px black;
+}

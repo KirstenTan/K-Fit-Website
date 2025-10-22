@@ -1,0 +1,20 @@
+/* Calculators */
+#calculator-form {
+    background-color: var(--light-gray);
+    border-left: 4px solid var(--medium-purple);
+    padding: var(--mt-4);
+    border-radius: 10px;
+}
+
+#calculator-form .form-group > label:not(.form-check-label) {
+    font-weight: bold;
+    text-align: left;
+}
+
+#results {
+    display: none;
+    background-color: var(--light-gray);
+    border-left: 4px solid var(--medium-purple);
+    padding: var(--mt-4);
+    border-radius: 10px;
+}

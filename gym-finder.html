@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>Gym Finder</title> 
+    
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="global.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <!-- Bootstrap 4 CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest Compiled Javascript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">K-Fit</a>
+
+        <!-- Navbar Toggler Button (for small screens) -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsible-navbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Links -->
+        <div class="collapse navbar-collapse justify-content-end" id="collapsible-navbar">
+            <ul class="navbar-nav">
+
+                <!-- Home -->
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html">Home</a>
+                </li>
+    
+                <!-- Workouts and Nutrition -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                        Workouts & Nutrition
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="workout-plans.html">Workout Plans</a>
+                        <a class="dropdown-item" href="nutrition.html">Nutrition Guide & Meal Plans</a>
+                    </div>
+                </li>
+    
+                <!-- Tools -->
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                        Tools
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="calculators.html">TDEE & BMI Calculator</a>
+                        <a class="dropdown-item" href="quiz.html">Personal Workout Plan Quiz</a>
+                        <a class="dropdown-item" href="fitness-tracker.html">Fitness Tracker</a>
+                        <a class="dropdown-item" href="gym-finder.html">Find Nearby Gyms</a>
+                    </div>
+                </li>
+    
+                <!-- Contact -->
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+    
+                <!-- Account -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                        Account
+                    </a>
+                    <div  class="dropdown-menu dropdown-menu-right">
+                        <a id="membership-link" class="dropdown-item" href="membership.html">Sign Up / Log In</a>
+                        <button id="logout-button" class="dropdown-item" onclick="logout()">Log Out</button>
+                        <a class="dropdown-item" href="profile-dashboard.html">Profile Dashboard</a>
+                    </div>
+                </li>
+            </ul>
+        </div> 
+    </nav>
+    
+    <!-- Header -->
+    <div class="jumbotron text-center">
+        <h1 class="mt-5 mb-5">Find Nearby Gyms</h1>
+    </div>
+
+    <!-- Geolocation -->
+    <div class="container">
+        <div id="location"></div>
+        <div id="map"> 
+            <iframe
+                id="map-frame"
+                height="450"
+                style="border: 0; width: 100%"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+        <a href="" id="find-gym-btn" class="btn btn-warning">Find Gym</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <!-- Logo -->
+                <div class="col-md-6">
+                    <h5>K-Fit</h5>
+                    <p>Your complete fitness solution for workouts and nutrition.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="workout-plans.html">Workout Plans</a></li>
+                        <li><a href="nutrition.html">Nutrition Guide & Meal Plans</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="profile-dashboard.html">Profile</a></li>
+                    </ul>
+                </div>
+
+                <!-- Join Us -->
+                <div class="col-md-3">
+                    <h5>Join Us</h5>
+                    <form id="join-form" class="mb-3">
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="join-email" placeholder="Enter your email" required>
+                        </div>
+                        <button type="button" class="btn btn-warning btn-block" onclick="getStarted()">Get Started</button>
+                    </form>
+                </div>
+            </div>
+
+            <a class="bi bi-facebook" href="https://facebook.com"></a>
+            <a class="bi bi-instagram" href="https://instagram.com"></a>
+            <a class="bi bi-snapchat" href="https://snapchat.com"></a>
+            <a class="bi bi-pinterest" href="https://pinterest.com"></a>
+            <a class="bi bi-twitter" href="https://twitter.com"></a>
+            <a class="bi bi-linkedin" href="https://linkedin.com"></a>
+        </div>
+    </footer>
+
+    <!-- Scroll-To-Top Button -->
+    <button id="scroll-btn" class="bi bi-arrow-up fixed-bottom" onclick="scrollToTop()"> Top</button>
+
+    <!-- Reference to JavaScript files -->
+    <script src="global.js"></script>
+    <script src="gym-finder.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap" async defer></script>
+
+</body>
+</html>

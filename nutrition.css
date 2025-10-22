@@ -1,0 +1,55 @@
+/* Header */
+#header {
+    background-image: url('images/steak.jpg')
+}
+
+#header .photo-citation {
+    margin: auto;
+    margin-top: var(--mt-5);
+}
+
+/* Meal Plans */
+
+/* Meal plan  section */
+#meal-plan {
+    background-color: var(--medium-purple);
+    color: white;
+}
+
+/* Container for each day of the meal-plan */
+.day-plan-container {
+    width: 97%;
+    border-radius: 10px;
+    padding: var(--mt-3);
+    box-shadow: 4px 4px 2px var(--dark-purple);
+    background-color: white;
+    color: black;
+    text-align: left;
+}
+
+.day-plan .description {
+    width: 100%;
+    background-color: var(--yellow);
+    padding-left: var(--mt-1);
+    border-radius: 10px;
+}
+
+.day-plan h3 {
+    margin-top: var(--mt-1);
+}
+
+/* Container for each dish in a day-plan */
+.dish {
+    display: flex;
+    align-items: center;
+}
+
+.dish img {
+    height: 40px;
+    width: 60px;
+    object-fit: contain;
+}
+
+.dish .text-container {
+    padding: var(--mt-1);
+}
