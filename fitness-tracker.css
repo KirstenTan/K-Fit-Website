@@ -1,0 +1,21 @@
+#fitness-tracker {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--mt-3);
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-bottom: var(--mt-5);
+    padding: var(--mt-5);
+    box-shadow: 2px 2px 4px gray;
+    width: 95%;
+    max-width: 700px;
+}
+
+#exercise-log-table th {
+    border-top: 0 !important;
+}

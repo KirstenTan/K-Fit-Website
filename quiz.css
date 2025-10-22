@@ -1,0 +1,46 @@
+/* General Quiz Styles */
+.q-n-a {
+    margin-bottom: var(--mt-4);
+}
+.answer {
+    border: 2px solid var(--medium-purple);
+    border-radius: 4px;
+    background-color: white;
+    padding: var(--mt-1);
+    margin-bottom: var(--mt-1);
+}
+
+.answer:hover, .answer:focus, .answer.selected {
+    outline: none;
+    background-color: var(--medium-purple);
+    color: white;
+}
+
+.answer:focus {
+    box-shadow: 2px 2px 2px var(--dark-purple) inset;
+}
+
+/* Recommended Workout Plan */
+.result {
+    background-color: var(--light-gray);
+    padding: var(--mt-3);
+    border-radius: 10px;
+    border-left: 4px solid var(--medium-purple);
+}
+
+.plan-name {
+    color: var(--medium-purple);
+}
+
+.recommended-plan .card {
+    width: 250px !important;
+    box-shadow: 4px 4px grey;
+}
+
+.recommended-plan .card-body {
+    text-decoration: none !important;
+}
+
+.recommended-plan .coming-soon {
+    filter: grayscale(100%);
+}

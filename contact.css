@@ -1,0 +1,37 @@
+
+/* Contact Page */
+#contact-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(
+        to bottom,
+        transparent 70%,
+        var(--medium-purple) 30%),
+        url('images/home-header.jpg');
+    background-size: cover;
+    background-position: top;
+    height: 850px;
+    color: white;
+}
+
+.title {
+    text-shadow: 4px 4px var(--dark-purple);
+}
+
+#contact-form {
+    padding: var(--mt-4);
+    margin: auto;
+    margin-bottom: var(--mt-2);
+    max-width: 600px;
+    background-color: white;
+    box-shadow: 8px 8px var(--dark-purple);
+    text-align: left;
+    color: black;
+}
+
+/* Input Elements */
+
+#submit-button {
+    margin-top: var(--mt-4);
+}

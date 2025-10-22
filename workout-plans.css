@@ -1,0 +1,143 @@
+/* Header */
+#header {
+    background-image: url('images/workouts-header.jpg');
+}
+
+/* Quiz Link */
+#quiz-link {
+    background-color: var(--medium-purple);
+}
+
+#quiz-link .title {
+    color: var(--light-gray);
+}
+
+/* Workout Plan Cards */
+#workout-plans .cards-container {
+    display: flex;
+}
+
+#workout-plans .card {
+    height: 450px;
+    width: 250px !important;
+}
+
+#workout-plans .card:focus {
+    outline: none !important;
+    box-shadow: 4px 4px grey;
+}
+
+#workout-plans .coming-soon {
+    filter: grayscale(100%);
+}
+
+/* General Workout Plan Styles */
+.plan {
+    background-color: var(--medium-purple);
+    padding: var(--large-spacing);
+    display: none;
+}
+
+.plan.active {
+    display: block; /* Toggle visibility once plan is chosen */
+}
+
+.plan-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: var(--xl-spacing) !important;
+    gap: var(--mt-5);
+}
+
+.title {
+    margin-bottom: var(--mt-3);
+    text-align: center;
+}
+
+.plan-title {
+    color: var(--medium-purple);
+    margin-bottom: var(--mt-4);
+}
+
+.plan img {
+    width: 100%;
+}
+
+.equipment-checklist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--mt-5);
+}
+
+.plan-table {
+    width: 100%;
+}
+
+.day-plans-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Workout Plan 1 */
+#plan1 .exercise-header {
+    width: 70%;
+}
+
+#plan1 .sets-header {
+    width: 15%;
+}
+
+#plan1 .reps-header {
+    width: 15%;
+}
+
+/* Workout Plan 2 */
+#plan2 .table-headers {
+    border-bottom: 1px solid black;
+}
+
+#plan2 .day-header {
+    width: 10%;
+}
+
+#plan2 .focus-header {
+    width: 35%;
+}
+
+#plan2 .goal-header {
+    width: 55%;
+}
+
+#plan2 .day-plan {
+    border: 1px solid black;
+    min-width: 400px;
+    width: 70%;
+    margin: auto;
+    margin-bottom: var(--mt-3);
+    padding: var(--mt-3);
+}
+
+/* Tutorials */
+#tutorials {
+    background-color: var(--medium-purple);
+    color: white;
+}
+
+#tutorials .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#tutorials .card {
+    width: 330px !important;
+    overflow: hidden;
+    color: white;
+}
+
+#tutorials iframe {
+    border: none;
+}
