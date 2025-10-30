@@ -3,11 +3,10 @@ K-Fit is a responsive and interactive fitness website developed for a university
 
 ## How It's Made:
 K-Fit was built using HTML, CSS (Bootstrap), JavaScript, and jQuery to demonstrate front-end web development skills and user interface design principles:
-  
-  HTML - Website structure and content.
-  CSS / Bootstrap - Styling, responsive layout, and UI components.
-  JavaScript - Core functionality, logic, and calculator implementation.
-  jQuery - DOM manipulation, animations, event handling.
+- HTML - Website structure and content.
+- CSS / Bootstrap - Styling, responsive layout, and UI components.
+- JavaScript - Core functionality, logic, and calculator implementation.
+- jQuery - DOM manipulation, animations, event handling.
 
 ## Responsiveness & Accessibility
 K-Fit is fully responsive and optimised for viewing across desktop, tablet, and mobile devices, utilising Bootstrap's flexible grid system and responsive class. Its accessibility was also checked using SilkTide and through testing on the WebbIE web browser.
